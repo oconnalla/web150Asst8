@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+    #faqs h1 { 
+		position: relative;
+		left: -500px;
+        display:hidden;
+}
+
+    #faqs{
+        border:1px solid blue;
+        display: inline-block;
+        padding:1em;
+    }
+    #faqs li {
+        list-style-type: none;
+        margin-bottom:.5em;
+        font-weight: bold;
+    }
+    li::before {
+        content: "+"; color: lightblue;
+        display: inline-block; width: 1.5em;
+        margin-left: -1em;
+    }
+    #faqs h1{
+        color:blue;
+        margin-left: 1em;
+    }
+    #faqs a{
+        color:purple;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   
+</head>
+
+<body>
+   <div id="faqs">
+        <h1> jQuery Facts</h1>
+        <ul>
+            <li>What is jQuery?</li>
+            <li>Why is jQuery becoming so popular?</li>
+            <li>Which is harder to learn jQuery or Javascript?</li>
+        </ul>
+        <a href = "#"> Review jQuery UI easings in a new window or tab</a>
+    </div>
+
+    <script>
+    $(document).ready(function() {
+    $("#faqs h1").css("display", "visible");
+    $("#faqs h1").animate({left: '0px'},2000);
+});
+    </script>
+</body>
+</html>
